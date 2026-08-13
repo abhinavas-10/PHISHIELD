@@ -1,0 +1,56 @@
+{
+    "Random Forest": {
+        "accuracy": 0.994783604402129,
+        "precision": 0.9931719199822839,
+        "recall": 0.9977382276603634,
+        "f1_score": 0.9954498372299497,
+        "roc_auc": 0.9964351872946742,
+        "confusion_matrix": [
+            [
+                20004,
+                185
+            ],
+            [
+                61,
+                26909
+            ]
+        ],
+        "classification_report": "              precision    recall  f1-score   support\n\n           0       1.00      0.99      0.99     20189\n           1       0.99      1.00      1.00     26970\n\n    accuracy                           0.99     47159\n   macro avg       1.00      0.99      0.99     47159\nweighted avg       0.99      0.99      0.99     47159\n"
+    },
+    "Decision Tree": {
+        "accuracy": 0.9941898683178184,
+        "precision": 0.9930919837458441,
+        "recall": 0.9967741935483871,
+        "f1_score": 0.9949296817172465,
+        "roc_auc": 0.9932253331710552,
+        "confusion_matrix": [
+            [
+                20002,
+                187
+            ],
+            [
+                87,
+                26883
+            ]
+        ],
+        "classification_report": "              precision    recall  f1-score   support\n\n           0       1.00      0.99      0.99     20189\n           1       0.99      1.00      0.99     26970\n\n    accuracy                           0.99     47159\n   macro avg       0.99      0.99      0.99     47159\nweighted avg       0.99      0.99      0.99     47159\n"
+    },
+    "Logistic Regression": {
+        "accuracy": 0.9932356496108908,
+        "precision": 0.9888118557646455,
+        "recall": 0.9994809047089358,
+        "f1_score": 0.9941177555272814,
+        "roc_auc": 0.9962685602149783,
+        "confusion_matrix": [
+            [
+                19884,
+                305
+            ],
+            [
+                14,
+                26956
+            ]
+        ],
+        "classification_report": "              precision    recall  f1-score   support\n\n           0       1.00      0.98      0.99     20189\n           1       0.99      1.00      0.99     26970\n\n    accuracy                           0.99     47159\n   macro avg       0.99      0.99      0.99     47159\nweighted avg       0.99      0.99      0.99     47159\n"
+    }
+}

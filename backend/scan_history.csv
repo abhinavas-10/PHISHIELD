@@ -1,0 +1,5 @@
+ID,URL,Prediction,Confidence,Risk,Reason,Created At
+4,https://example.com,Phishing,100.0,High,The machine-learning model classified this URL as potentially phishing based on its extracted URL characteristics.,2026-08-12T05:10:38.261356
+3,https://example.com,Phishing,100.0,High,The machine-learning model classified this URL as potentially phishing based on its extracted URL characteristics.,2026-08-12T04:58:51.601752
+2,https://example.com,Phishing,100.0,High,The machine-learning model classified this URL as potentially phishing based on its extracted URL characteristics.,2026-08-12T04:53:02.054245
+1,https://example.com,Phishing,100.0,High,The machine-learning model classified this URL as potentially phishing based on its extracted URL characteristics.,2026-08-12T04:49:59.385849

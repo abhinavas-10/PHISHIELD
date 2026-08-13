@@ -1,0 +1,181 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * PHISHIELD design system — strictly black, white and grayscale.
+ * All colors are oklch grayscale (chroma 0). No hue is allowed anywhere.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 3px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 5px);
+  --radius-2xl: calc(var(--radius) + 10px);
+  --radius-3xl: calc(var(--radius) + 18px);
+  --radius-4xl: calc(var(--radius) + 26px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-invert: var(--invert);
+  --color-invert-foreground: var(--invert-foreground);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --shadow-panel: 0 1px 0 0 oklch(1 0 0 / 6%) inset, 0 30px 60px -30px oklch(0 0 0 / 80%);
+  --shadow-lift: 0 20px 45px -25px oklch(0 0 0 / 55%);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* Dark (default) — #000000 base */
+  --background: oklch(0 0 0);
+  --foreground: oklch(1 0 0);
+  --surface: oklch(0.145 0 0); /* ~#111111 */
+  --surface-2: oklch(0.19 0 0); /* ~#181818 */
+  --card: oklch(0.115 0 0); /* ~#0d0d0d */
+  --card-foreground: oklch(1 0 0);
+  --popover: oklch(0.115 0 0);
+  --popover-foreground: oklch(1 0 0);
+  --primary: oklch(1 0 0);
+  --primary-foreground: oklch(0 0 0);
+  --secondary: oklch(0.19 0 0);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.19 0 0);
+  --muted-foreground: oklch(0.66 0 0); /* ~#999999 */
+  --accent: oklch(0.24 0 0);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.98 0 0);
+  --destructive-foreground: oklch(0 0 0);
+  --border: oklch(1 0 0 / 12%);
+  --border-strong: oklch(1 0 0 / 24%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(1 0 0 / 40%);
+  /* Inverted panel (light block on black page) */
+  --invert: oklch(0.975 0 0); /* ~#f5f5f5 */
+  --invert-foreground: oklch(0.03 0 0);
+}
+
+.light {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.03 0 0);
+  --surface: oklch(0.975 0 0);
+  --surface-2: oklch(0.94 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.03 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.03 0 0);
+  --primary: oklch(0.03 0 0);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.955 0 0);
+  --secondary-foreground: oklch(0.03 0 0);
+  --muted: oklch(0.955 0 0);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.93 0 0);
+  --accent-foreground: oklch(0.03 0 0);
+  --destructive: oklch(0.03 0 0);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0 0 0 / 12%);
+  --border-strong: oklch(0 0 0 / 24%);
+  --input: oklch(0 0 0 / 14%);
+  --ring: oklch(0 0 0 / 35%);
+  --invert: oklch(0.06 0 0);
+  --invert-foreground: oklch(1 0 0);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: var(--color-foreground);
+    color: var(--color-background);
+  }
+}
+
+/* Fine technical grid, monochrome and very subtle */
+@utility grid-backdrop {
+  background-image:
+    linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black, transparent 75%);
+}
+
+@utility label-eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+}
+
+@utility rise-in {
+  animation: rise-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
