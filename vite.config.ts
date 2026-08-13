@@ -1,25 +1,30 @@
-// @Lovable.dev/vite-tanstack-config already provides the
-// standard TanStack Start, React, Tailwind, path alias,
-// Nitro, and development tooling configuration.
-
-import { defineConfig } from "@Lovable.dev/vite-tanstack-config";
+import { defineConfig } from "vite";
+import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import viteReact from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  tanstackStart: {
-    server: {
-      entry: "server",
-    },
+  plugins: [
+    tanstackStart({
+      server: {
+        entry: "server",
+      },
+    }),
+    tailwindcss(),
+    viteReact(),
+  ],
+
+  resolve: {
+    tsconfigPaths: true,
   },
 
-  vite: {
-    server: {
-      proxy: {
-        "/api": {
-          target:
-            process.env["FLASK_API_URL"] ??
-            "http://127.0.0.1:5000",
-          changeOrigin: true,
-        },
+  server: {
+    proxy: {
+      "/api": {
+        target:
+          process.env["FLASK_API_URL"] ??
+          "http://127.0.0.1:5000",
+        changeOrigin: true,
       },
     },
   },
