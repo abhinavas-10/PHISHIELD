@@ -4,16 +4,12 @@
 
 ### AI-Powered Phishing URL Detection System
 
-A full-stack web application that analyzes URLs and predicts whether they are **Safe** or potentially **Phishing** using Machine Learning.
+A full-stack web application that analyzes URLs and uses Machine Learning to detect potential phishing threats.
 
 <br />
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
-![Flask](https://img.shields.io/badge/Flask-Backend-black?style=for-the-badge&logo=flask)
-![React](https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-Frontend-3178C6?style=for-the-badge&logo=typescript)
-![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-URL%20Detection-orange?style=for-the-badge)
+[Live Demo](https://phishield-gamma.vercel.app) •
+[Backend API](https://phishield-rcd2.onrender.com/api/predict)
 
 </div>
 
@@ -21,37 +17,73 @@ A full-stack web application that analyzes URLs and predicts whether they are **
 
 ## 📌 Overview
 
-**PHISHIELD** is an end-to-end phishing URL detection system that combines modern web development with Machine Learning.
+**PHISHIELD** is an end-to-end phishing URL detection system designed to help users identify potentially malicious websites.
 
-Users can enter a website URL and analyze it for potential phishing characteristics. The frontend communicates with a Python Flask REST API, which processes the URL and uses a trained Machine Learning model to generate a prediction.
+Users can enter a URL through a modern web interface. The URL is sent to a Python Flask REST API, where it is processed and analyzed using a trained Machine Learning classification model.
 
-The system returns information such as:
+The system returns a security assessment including:
 
 - 🛡️ Safe or Phishing prediction
-- 📊 Prediction confidence
+- 📊 Confidence score
 - ⚠️ Risk level
 - 🔍 Security signals
-- 📝 Scan summary
-- 📚 Scan history
-- 📈 Dashboard statistics
+- 📝 Analysis summary
+- 📜 Scan history and dashboard statistics
 
 ---
 
-# ✨ Features
+## 🚀 Live Demo
 
-## 🔍 URL Scanner
+🌐 **Frontend:**  
+https://phishield-gamma.vercel.app
 
-Users can enter a URL and receive a phishing detection result.
+⚙️ **Backend API:**  
+https://phishield-rcd2.onrender.com/api/predict
+
+> **Note:** The backend is deployed separately from the frontend.
+
+---
+
+## 🏗️ System Architecture
 
 ```text
-https://example.com
-        ↓
-URL Validation
-        ↓
-Feature Extraction
-        ↓
-Machine Learning Model
-        ↓
-Safe / Phishing Prediction
-        ↓
-Result Displayed
+                    ┌───────────────┐
+                    │     USER      │
+                    └───────┬───────┘
+                            │
+                            ▼
+              ┌─────────────────────────┐
+              │   React + TypeScript    │
+              │       Frontend          │
+              └───────────┬─────────────┘
+                          │
+                     REST API
+                          │
+                          ▼
+              ┌─────────────────────────┐
+              │      Flask Backend      │
+              │      Python REST API    │
+              └───────────┬─────────────┘
+                          │
+                          ▼
+              ┌─────────────────────────┐
+              │    URL Validation &     │
+              │   Feature Extraction    │
+              └───────────┬─────────────┘
+                          │
+                          ▼
+              ┌─────────────────────────┐
+              │   Machine Learning      │
+              │        Model            │
+              └───────────┬─────────────┘
+                          │
+                          ▼
+              ┌─────────────────────────┐
+              │ Prediction + Confidence │
+              │   Risk + Security Info  │
+              └───────────┬─────────────┘
+                          │
+                          ▼
+              ┌─────────────────────────┐
+              │ React Results Dashboard │
+              └─────────────────────────┘
