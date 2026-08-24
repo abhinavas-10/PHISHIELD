@@ -4,133 +4,45 @@
 
 ### AI-Powered Phishing URL Detection System
 
-A full-stack web application that analyzes URLs and uses Machine Learning to detect potential phishing threats.
-# 🛠️ Tech Stack
+<p>
+  A modern <b>full-stack security application</b> that analyzes URLs and uses
+  <b>Machine Learning</b> to identify potential phishing threats.
+</p>
+
+<br />
+
+<p>
+  <a href="https://phishield-gamma.vercel.app">
+    <img src="https://img.shields.io/badge/🌐_Live_Demo-Visit_PHISHIELD-success?style=for-the-badge" />
+  </a>
+  &nbsp;
+  <a href="https://phishield-rcd2.onrender.com/api/predict">
+    <img src="https://img.shields.io/badge/⚡_Backend_API-Render-blue?style=for-the-badge" />
+  </a>
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white&style=flat-square" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=flat-square" />
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square" />
+  <img src="https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white&style=flat-square" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white&style=flat-square" />
+  <img src="https://img.shields.io/badge/ML-Powered-orange?style=flat-square" />
+</p>
+
+<br />
+
+</div>
+
+---
+
+# ✨ What is PHISHIELD?
+
+**PHISHIELD** is an end-to-end phishing URL detection system that helps users identify potentially malicious websites before interacting with them.
+
+The application combines a modern web interface, a Python REST API, database functionality, and a trained Machine Learning model to provide a complete URL security analysis.
 
 <div align="center">
 
-### Frontend
-
-<img src="https://skillicons.dev/icons?i=react,ts,vite,tailwind" />
-
-<br /><br />
-
-### Backend
-
-<img src="https://skillicons.dev/icons?i=python,flask" />
-
-<br /><br />
-
-### Machine Learning & Data
-
-<img src="https://skillicons.dev/icons?i=python" />
-
-<br />
-
-**Scikit-learn • Pandas • NumPy**
-
-<br /><br />
-
-### Database
-
-<img src="https://skillicons.dev/icons?i=sqlite" />
-
-<br /><br />
-
-### Deployment
-
-<img src="https://skillicons.dev/icons?i=vercel" />
-
-<br />
-
-**Vercel • Render**
-
-<br /><br />
-
-### Tools
-
-<img src="https://skillicons.dev/icons?i=git,github,vscode" />
-
-</div>
-
-<br />
-
-[Live Demo](https://phishield-gamma.vercel.app) •
-[Backend API](https://phishield-rcd2.onrender.com/api/predict)
-
-</div>
-
----
-
-## 📌 Overview
-
-**PHISHIELD** is an end-to-end phishing URL detection system designed to help users identify potentially malicious websites.
-
-Users can enter a URL through a modern web interface. The URL is sent to a Python Flask REST API, where it is processed and analyzed using a trained Machine Learning classification model.
-
-The system returns a security assessment including:
-
-- 🛡️ Safe or Phishing prediction
-- 📊 Confidence score
-- ⚠️ Risk level
-- 🔍 Security signals
-- 📝 Analysis summary
-- 📜 Scan history and dashboard statistics
-
----
-
-## 🚀 Live Demo
-
-🌐 **Frontend:**  
-https://phishield-gamma.vercel.app
-
-⚙️ **Backend API:**  
-https://phishield-rcd2.onrender.com/api/predict
-
-> **Note:** The backend is deployed separately from the frontend.
-
----
-
-## 🏗️ System Architecture
-
 ```text
-                    ┌───────────────┐
-                    │     USER      │
-                    └───────┬───────┘
-                            │
-                            ▼
-              ┌─────────────────────────┐
-              │   React + TypeScript    │
-              │       Frontend          │
-              └───────────┬─────────────┘
-                          │
-                     REST API
-                          │
-                          ▼
-              ┌─────────────────────────┐
-              │      Flask Backend      │
-              │      Python REST API    │
-              └───────────┬─────────────┘
-                          │
-                          ▼
-              ┌─────────────────────────┐
-              │    URL Validation &     │
-              │   Feature Extraction    │
-              └───────────┬─────────────┘
-                          │
-                          ▼
-              ┌─────────────────────────┐
-              │   Machine Learning      │
-              │        Model            │
-              └───────────┬─────────────┘
-                          │
-                          ▼
-              ┌─────────────────────────┐
-              │ Prediction + Confidence │
-              │   Risk + Security Info  │
-              └───────────┬─────────────┘
-                          │
-                          ▼
-              ┌─────────────────────────┐
-              │ React Results Dashboard │
-              └─────────────────────────┘
+🔗 Enter URL  →  🧠 Analyze  →  🤖 ML Prediction  →  🛡️ Security Result
