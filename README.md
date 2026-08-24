@@ -5,6 +5,53 @@
 ### AI-Powered Phishing URL Detection System
 
 A full-stack web application that analyzes URLs and uses Machine Learning to detect potential phishing threats.
+# 🛠️ Tech Stack
+
+<div align="center">
+
+### Frontend
+
+<img src="https://skillicons.dev/icons?i=react,ts,vite,tailwind" />
+
+<br /><br />
+
+### Backend
+
+<img src="https://skillicons.dev/icons?i=python,flask" />
+
+<br /><br />
+
+### Machine Learning & Data
+
+<img src="https://skillicons.dev/icons?i=python" />
+
+<br />
+
+**Scikit-learn • Pandas • NumPy**
+
+<br /><br />
+
+### Database
+
+<img src="https://skillicons.dev/icons?i=sqlite" />
+
+<br /><br />
+
+### Deployment
+
+<img src="https://skillicons.dev/icons?i=vercel" />
+
+<br />
+
+**Vercel • Render**
+
+<br /><br />
+
+### Tools
+
+<img src="https://skillicons.dev/icons?i=git,github,vscode" />
+
+</div>
 
 <br />
 
